@@ -11,7 +11,7 @@ yarn add git+https://github.com/SeedV/cross-platform-websocket.git#<branch|tag>
 ## Usage
 
 ### Browser
-> **Note:** Browser not support the options param.
+> **Note:** Browser does not support the options parameter.
 ```
 const ws = new WebSocket('ws://localhost:8888/ws');
 ws.onopen = () => console.warn('ws open');
