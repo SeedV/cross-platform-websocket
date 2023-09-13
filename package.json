@@ -31,7 +31,7 @@
     "cross-platform"
   ],
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
+    "build": "rm -rf dist && rollup -c && node scripts/copy-package-json.js",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write 'src/**/*.{js,ts,md,json}' --config ./.prettierrc",
