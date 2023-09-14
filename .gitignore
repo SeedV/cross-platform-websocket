@@ -3,6 +3,7 @@
 
 # build files
 /build
+/dist
 
 # misc
 .DS_Store

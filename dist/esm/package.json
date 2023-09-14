@@ -1,8 +1,0 @@
-{
-  "name": "@seedv/cross-platform-websocket",
-  "type": "module",
-  "browser": {
-    "./globalThis/index.js": "./globalThis/browser.js",
-    "./websocket-constructor/index.js": "./websocket-constructor/browser.js"
-  }
-}

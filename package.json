@@ -35,7 +35,8 @@
     "test": "jest",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write 'src/**/*.{js,ts,md,json}' --config ./.prettierrc",
-    "prepare": "husky install"
+    "husky:install": "husky install",
+    "prepare": "yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",

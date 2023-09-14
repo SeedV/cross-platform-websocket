@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../../../src/websocket-constructor/index.ts"],"sourcesContent":["import ws from 'ws';\nexport var usingBrowserWebSocket = false;\nexport var nextTick = process.nextTick;\nexport { ws as WebSocket };\n//# sourceMappingURL=index.js.map"],"names":[],"mappings":";;;;AACU,IAAC,qBAAqB,GAAG,MAAM;AAC/B,IAAC,QAAQ,GAAG,OAAO,CAAC;;;;;;"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../../../src/globalThis/index.ts"],"sourcesContent":["export var globalThisShim = global;\n//# sourceMappingURL=index.js.map"],"names":[],"mappings":"AAAU,IAAC,cAAc,GAAG;;;;"}
