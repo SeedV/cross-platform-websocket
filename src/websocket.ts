@@ -11,6 +11,7 @@ const isReactNative =
 export class WebSocket {
   private ws: WS;
   constructor(
+    private readonly key: string | undefined,
     url: string | URL,
     protocols?: string | string[],
     options?: {headers?: {[header: string]: string}}
@@ -22,20 +23,20 @@ export class WebSocket {
     }
   }
 
-  set onopen(cb: (evt: unknown) => void) {
-    this.ws.onopen = cb;
+  set onopen(cb: (key: string | undefined, evt: unknown) => void) {
+    this.ws.onopen = e => cb(this.key, e);
   }
 
-  set onclose(cb: (evt: unknown) => void) {
-    this.ws.onclose = cb;
+  set onclose(cb: (key: string | undefined, evt: unknown) => void) {
+    this.ws.onclose = e => cb(this.key, e);
   }
 
-  set onerror(cb: (evt: unknown) => void) {
-    this.ws.onerror = cb;
+  set onerror(cb: (key: string | undefined, evt: unknown) => void) {
+    this.ws.onerror = e => cb(this.key, e);
   }
 
-  set onmessage(cb: (data: unknown) => void) {
-    this.ws.onmessage = e => cb(e.data);
+  set onmessage(cb: (key: string | undefined, data: unknown) => void) {
+    this.ws.onmessage = e => cb(this.key, e.data);
   }
 
   send(data: string, opts?: {compress?: boolean}) {
