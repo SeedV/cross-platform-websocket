@@ -13,20 +13,21 @@ yarn add git+https://github.com/SeedV/cross-platform-websocket.git#<branch|tag>
 ### Browser
 > **Note:** Browser does not support the options parameter.
 ```
-const ws = new WebSocket('ws://localhost:8888/ws');
-ws.onopen = () => console.warn('ws open');
-ws.onmessage = data => console.warn('ws message', data);
-ws.onclose = () => console.warn('ws close');
+const ws = new WebSocket('key', 'ws://localhost:8888/ws');
+ws.onopen = key => console.warn(key, 'ws open');
+ws.onmessage = (key, data) => console.warn(key, 'ws message', data);
+ws.onclose = key => console.warn(key, 'ws close');
 ```
 
 ### Node
 ```
 const ws = new WebSocket(
+    'key',
     'ws://localhost:8888/ws',
     undefined,
     {headers: {['Authorization']: 'token'}}
 );
-ws.onopen = () => console.warn('ws open');
-ws.onmessage = data => console.warn('ws message', data);
-ws.onclose = () => console.warn('ws close');
+ws.onopen = key => console.warn(key, 'ws open');
+ws.onmessage = (key, data) => console.warn(key, 'ws message', data);
+ws.onclose = key => console.warn(key, 'ws close');
 ```
